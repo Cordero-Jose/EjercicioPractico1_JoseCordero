@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <div th:fragment="navbar">
+        <nav style="background-color:#007bff; padding:10px;">
+            <a th:href="@{/}" style="color:white; margin-right:15px; text-decoration:none;">Inicio</a>
+            <a th:href="@{/categorias}" style="color:white; margin-right:15px; text-decoration:none;">Categorías</a>
+            <a th:href="@{/servicios}" style="color:white; margin-right:15px; text-decoration:none;">Servicios</a>
+            <a th:href="@{/reservas}" style="color:white; margin-right:15px; text-decoration:none;">Reservas</a>
+        </nav>
+    </div>
+</body>
+</html>

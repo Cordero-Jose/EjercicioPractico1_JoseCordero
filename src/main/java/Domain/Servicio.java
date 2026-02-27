@@ -16,19 +16,16 @@ public class Servicio {
     @Column(name = "precio", nullable = false)
     private Double precio;
 
-    @Column(name = "descripcion")
+    // Este campo ya no se mapea a la BD
+    @Transient
     private String descripcion;
 
-    // Relación muchos servicios -> una categoría
     @ManyToOne
-    @JoinColumn(name = "id_categoria", nullable = false)
+    @JoinColumn(name = "categoria_id", nullable = false)
     private Categoria categoria;
 
-    // Constructor vacío (obligatorio para JPA)
-    public Servicio() {
-    }
+    public Servicio() {}
 
-    // Constructor con parámetros
     public Servicio(String nombre, Double precio, String descripcion, Categoria categoria) {
         this.nombre = nombre;
         this.precio = precio;
@@ -36,7 +33,6 @@ public class Servicio {
         this.categoria = categoria;
     }
 
-    // Getters y Setters
     public Integer getId() {
         return id;
     }

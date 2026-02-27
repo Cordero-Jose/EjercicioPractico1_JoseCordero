@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio - Caso Práctico 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        .menu {
+            margin-top: 40px;
+        }
+        a {
+            display: inline-block;
+            margin: 15px;
+            padding: 12px 25px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Bienvenido al Sistema</h1>
+
+    <div class="menu">
+        <a th:href="@{/categorias}">Gestionar Categorías</a>
+        <a th:href="@{/servicios}">Gestionar Servicios</a>
+        <a th:href="@{/reservas}">Gestionar Reservas</a>
+    </div>
+
+</body>
+</html>
